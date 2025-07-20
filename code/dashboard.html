@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card shadow-sm p-4 mb-4">
+  <h2 class="mb-4">Create New Short URL</h2>
+
+  <form method="POST" class="mb-4">
+    <!-- Long URL -->
+    <div class="mb-3">
+      <label for="long_url" class="form-label">Long URL</label>
+      <input
+        type="url"
+        id="long_url"
+        name="long_url"
+        class="form-control"
+        required
+        placeholder="https://example.com/long-url"
+      />
+    </div>
+
+    <!-- Slug -->
+    <div class="mb-3">
+      <label for="slug" class="form-label">Slug URL</label>
+      <input
+        type="text"
+        id="slug"
+        name="slug"
+        class="form-control"
+        placeholder="your-custom-slug (optional)"
+      />
+      <div class="form-text">
+        Your short URL will be: http://yourdomain.com/&lt;slug&gt;
+        (auto-generated if left blank)
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-success" type="submit">Create Short URL</button>
+  </form>
+</div>
+
+<!-- Your URLs Table -->
+<div class="card shadow-sm p-4">
+  <h2>Your URLs</h2>
+  <table class="table table-hover align-middle">
+    <thead>
+      <tr>
+        <th>Short URL</th>
+        <th>Long URL</th>
+        <th>Visit Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for url in urls %}
+      <tr>
+        <td>
+          <a
+            href="{{ url_for('redirect_slug', slug=url.slug, _external=True) }}"
+            target="_blank"
+          >
+            {{ request.host_url }}{{ url.slug }}
+          </a>
+        </td>
+        <td class="text-truncate" style="max-width: 300px">
+          <a href="{{ url.long_url }}" target="_blank">{{ url.long_url }}</a>
+        </td>
+        <td>{{ url.visit_count }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="3" class="text-center text-muted">
+          You have not created any URLs yet.
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

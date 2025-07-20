@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<div class="main-content">
+  <h1>Welcome to the URL Shortener</h1>
+
+  {% if not current_user.is_authenticated %}
+  <p>
+    Please <a href="{{ url_for('login') }}">login</a> or
+    <a href="{{ url_for('register') }}">register</a> to start shortening URLs.
+  </p>
+  {% else %}
+  <p>
+    Go to your <a href="{{ url_for('dashboard') }}">dashboard</a> to manage
+    URLs.
+  </p>
+  {% endif %}
+</div>
+{% endblock %}

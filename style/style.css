@@ -1,0 +1,150 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  height: 70px;
+  padding: 10px 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar .btn {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+form .form-label {
+  font-weight: 500;
+}
+
+form input[type="url"],
+form input[type="text"],
+form input[type="password"] {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 15px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.table td,
+.table th {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.alert {
+  border-radius: 6px;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  margin-top: 60px;
+}
+
+.custom-navbar {
+  height: 70px;
+  padding: 10px 20px;
+  background-color: #f5f5f5 !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+.navbar .btn-sm {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
