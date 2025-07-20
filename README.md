@@ -1,17 +1,18 @@
 # assignment-url-shorten
 
-Create a virtual environment
+1. Create a virtual environment
 
-python3 -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
+    python3 -m venv venv
 
-Install dependencies
+    source venv/bin/activate   # Mac/Linux
 
-pip install -r requirements.txt
+    venv\Scripts\activate      # Windows
 
-Run the app
+2. Install dependencies
 
-flask run
+    pip install -r requirements.txt
 
-Then open http://127.0.0.1:5000 in your browser.
+3. Run the app
+
+    flask run
+
